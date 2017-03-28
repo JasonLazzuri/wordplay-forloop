@@ -4,7 +4,7 @@ $(document).ready(function(){
     var splitSentence = $("#sentence1").val().split(' ');
     var threeOrMore = [];
 
-    function something(){
+    var something = function(){
       for(var i=0; i < splitSentence.length; i++){
         if(splitSentence[i].length>=3){
           threeOrMore.push(splitSentence[i])
@@ -25,3 +25,16 @@ $(document).ready(function(){
 //     threeOrMore.push(splitSentence[i])
 //   }
 // }
+
+
+function hello(str){
+var puzzle = ""
+var split = str.split('');
+for(var i=0;i<split.length;i++){
+	if(split[i]==="a" ||split[i]==="e" ||split[i]==="i" ||split[i]==="o" 	||split[i]==="u"){
+  puzzle+="-"
+  }else{
+  puzzle += split[i]
+    }
+  } alert(puzzle)
+}
