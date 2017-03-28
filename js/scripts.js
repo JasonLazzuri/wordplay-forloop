@@ -4,11 +4,14 @@ $(document).ready(function(){
     var splitSentence = $("#sentence1").val().split(' ');
     var threeOrMore = [];
 
-    splitSentence.forEach(function(word){
-      if(word.length>=3){
-        threeOrMore.push(word)
+    function something(){
+      for(var i=0; i < splitSentence.length; i++){
+        if(splitSentence[i].length>=3){
+          threeOrMore.push(splitSentence[i])
       }
-    });
+      }
+    };
+    something();
 
     var reversed = threeOrMore.reverse().join(' ')
     alert(reversed)
@@ -16,3 +19,9 @@ $(document).ready(function(){
     event.preventDefault();
   });
 });
+
+// for(var i=0;i<splitSentence.length;i++){
+//   if(splitSentence[i].length>=3){
+//     threeOrMore.push(splitSentence[i])
+//   }
+// }
